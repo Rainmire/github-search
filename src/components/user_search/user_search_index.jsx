@@ -14,8 +14,8 @@ export default ({searchResults}) => {
                 //visit page
               }
             }>
-              <img src={user.avatar_url} alt="avatar"/>
-              {user.login}
+              <img className="user-search-avatar" src={user.avatar_url} alt="avatar"/>
+              <div className="user-search-username">{user.login}</div>
             </button>
           </li>
         )

@@ -1,0 +1,34 @@
+html, body, #root, .app {
+  height: 100vh;
+  width: 100vw;
+}
+
+.user-search {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-search-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-search-button {
+  height: 40px;
+  width: 175px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.user-search-avatar {
+  height: 30px;
+  width: auto;
+}
+
+.user-search-username {
+  margin-left: 10px;
+}
