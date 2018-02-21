@@ -1,3 +1,5 @@
+import { RECEIVE_SEARCH_RESULTS } from 'actions/search_actions';
+
 const messageReducer = (state = {}, action) => {
   Object.freeze(state);
   return state;

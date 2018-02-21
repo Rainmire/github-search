@@ -17,13 +17,17 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: {
-          presets: ['env', 'react']
+          presets: ['es2015', 'react']
         }
       }
     ]
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.js', '.jsx', '*']
-  }
+    extensions: ['.js', '.jsx', '*'],
+    modules: [
+    path.resolve('./src'),
+    path.resolve('./node_modules')
+  ]
+  },
 };

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import UserSearch from './user_search';
-import { fetchUsers } from '../../actions/search_actions';
+import { fetchUsers } from 'actions/search_actions';
 
 const mapStateToProps = (state) => ({
   //STATE
