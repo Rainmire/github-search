@@ -6,7 +6,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  //API call action
+  fetchUsers: (query => dispatch(fetchUsers(query)))
 });
 
 export default connect(

@@ -10,6 +10,11 @@ class UserSearch extends React.Component {
   }
   handleChange(e) {
     //query API
+    e.preventDefault();
+    const newVal = e.target.value;
+    this.setState({ searchVal: newVal }, () => {
+      this.props.fetchUsers(this.state.searchVal);
+    });
   }
   handleSubmit(e) {
     //visit github profile
