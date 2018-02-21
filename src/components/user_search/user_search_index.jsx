@@ -9,14 +9,10 @@ export default ({searchResults}) => {
       searchResults.map(
         (user) => (
           <li key={user.id}>
-            <button className="user-search-button" onClick={
-              ()=>{
-                //visit page
-              }
-            }>
+            <a href={user.html_url} className="user-search-link">
               <img className="user-search-avatar" src={user.avatar_url} alt="avatar"/>
               <div className="user-search-username">{user.login}</div>
-            </button>
+            </a>
           </li>
         )
       );

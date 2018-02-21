@@ -10,25 +10,44 @@ html, body, #root, .app {
   align-items: center;
 }
 
+.user-search-input {
+  height: 30px;
+  width: 180px;
+}
+
 .user-search-list {
   display: flex;
   flex-direction: column;
 }
 
-.user-search-button {
+.user-search-list li:first-child {
+  border-top: 1px solid black;
+}
+
+.user-search-list li {
+  display: flex;
   height: 40px;
-  width: 175px;
+  width: 180px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.user-search-link {
   display: flex;
   align-items: center;
   white-space: nowrap;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .user-search-avatar {
   height: 30px;
   width: auto;
+  margin-left: 4px;
 }
 
 .user-search-username {
   margin-left: 10px;
+  color: black;
 }
