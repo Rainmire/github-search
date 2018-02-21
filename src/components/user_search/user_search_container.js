@@ -3,7 +3,7 @@ import UserSearch from './user_search';
 import { fetchUsers } from 'actions/search_actions';
 
 const mapStateToProps = (state) => ({
-  //STATE
+  searchResults: state.searchResults
 });
 
 const mapDispatchToProps = (dispatch) => ({
