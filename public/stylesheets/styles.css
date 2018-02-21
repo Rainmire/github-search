@@ -21,16 +21,20 @@ html, body, #root, .app {
 }
 
 .user-search-list li:first-child {
-  border-top: 1px solid black;
+  border-top: 1px solid lightgray;
 }
 
 .user-search-list li {
   display: flex;
   height: 40px;
   width: 180px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.selected-item {
+  background-color: darkcyan;
 }
 
 .user-search-link {
@@ -39,6 +43,7 @@ html, body, #root, .app {
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
+  width: 100%;
 }
 
 .user-search-avatar {
