@@ -1,3 +1,5 @@
+const $ = require ('jquery');
+
 export const fetchUsers = (query) => (
   $.ajax({
     method: 'GET',
