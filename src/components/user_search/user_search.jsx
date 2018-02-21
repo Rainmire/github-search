@@ -39,7 +39,6 @@ class UserSearch extends React.Component {
             type='text'
             placeholder='Search for a Github user...'
             value={this.state.searchVal}
-            ref={el => { this.userSearchInput = el; }}
           />
         </div>
         {this.userSearchIndex()}

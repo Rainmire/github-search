@@ -6,6 +6,8 @@ class UserSearchIndex extends React.Component {
     super(props);
     this.state = { selectedUser: 0 };
     this.keyListener = this.keyListener.bind(this);
+    this.mouseEnter = this.mouseEnter.bind(this);
+
     window.addEventListener('keydown', this.keyListener, false);
   }
 
@@ -35,13 +37,19 @@ class UserSearchIndex extends React.Component {
     }
   }
 
+  mouseEnter(idx) {
+    this.setState({
+      selectedUser: idx
+    });
+  }
+
   userSearchItem(user, idx) {
     let itemClass = 'user-search-item';
     if (idx === this.state.selectedUser) {
       itemClass += ' selected-item';
     }
     return (
-      <li className={itemClass} key={idx}>
+      <li className={itemClass} key={idx} onMouseEnter={() => this.mouseEnter(idx)}>
         <a href={user.html_url} className='user-search-link'>
           <img className='user-search-avatar' src={user.avatar_url} alt='avatar'/>
           <div className='user-search-username'>{user.login}</div>
