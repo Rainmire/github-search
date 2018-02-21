@@ -1,8 +1,13 @@
 import { RECEIVE_SEARCH_RESULTS } from 'actions/search_actions';
 
-const messageReducer = (state = {}, action) => {
+const searchReducer = (state = [], action) => {
   Object.freeze(state);
-  return state;
+  switch (action.type) {
+    case RECEIVE_SEARCH_RESULTS:
+      return action.users;
+    default:
+      return state;
+  }
 };
 
-export default messageReducer;
+export default searchReducer;
