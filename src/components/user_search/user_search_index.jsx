@@ -4,24 +4,23 @@ export default ({searchResults}) => {
 
   let listItems;
 
-  if (userSearchResults.length !== 0) {
+  if (searchResults.length !== 0) {
     listItems =
-      userSearchResults.map(
+      searchResults.map(
         (user) => (
-          <li key={user.userId}>
+          <li key={user.id}>
             <button className="user-search-button" onClick={
               ()=>{
-                receiveUserSelection(user);
-                clearState();
-                focusUserSearchInput();
+                //visit page
               }
             }>
-              {user.displayName}
+              <img src={user.avatar_url} alt="avatar"/>
+              {user.login}
             </button>
           </li>
         )
       );
-  } else if (firstTime === false){
+  } else {
     listItems =
       <li>No results found</li>;
   }

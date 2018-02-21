@@ -29,7 +29,9 @@ class UserSearch extends React.Component {
 
   userSearchIndex() {
     if (this.state.searchVal !== '') {
-      return <UserSearchIndex searchResults={this.props.searchResults} />
+      return <UserSearchIndex 
+              searchResults={this.props.searchResults}
+               />
     }
   }
 
