@@ -4,7 +4,7 @@ html, body, #root, .app {
 }
 
 .user-search {
-  margin-top: 20vh;
+  padding-top: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;

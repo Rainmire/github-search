@@ -7,7 +7,6 @@ class UserSearch extends React.Component {
 
     this.state = { searchVal: '' };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.userSearchIndex = this.userSearchIndex.bind(this);
   }
 
@@ -23,10 +22,6 @@ class UserSearch extends React.Component {
     });
   }
 
-  handleSubmit(e) {
-    //visit github profile
-  }
-
   userSearchIndex() {
     if (this.state.searchVal !== '') {
       return <UserSearchIndex 
@@ -38,7 +33,7 @@ class UserSearch extends React.Component {
   render() {
     return (
       <div className='user-search'>
-        <form className='user-search-bar' onSubmit={this.handleSubmit}>
+        <div className='user-search-bar'>
           <input className='user-search-input'
             onChange={this.handleChange}
             type='text'
@@ -46,7 +41,7 @@ class UserSearch extends React.Component {
             value={this.state.searchVal}
             ref={el => { this.userSearchInput = el; }}
           />
-        </form>
+        </div>
         {this.userSearchIndex()}
       </div>
     );

@@ -5,11 +5,11 @@ class UserSearchIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = { selectedUser: 0 };
-    this.changeSelection = this.changeSelection.bind(this);
-    window.addEventListener('keydown', this.changeSelection, false);
+    this.keyListener = this.keyListener.bind(this);
+    window.addEventListener('keydown', this.keyListener, false);
   }
 
-  changeSelection(e) {
+  keyListener(e) {
     const keyName = event.key;
 
     if (keyName === 'ArrowUp') {
@@ -28,6 +28,10 @@ class UserSearchIndex extends React.Component {
         }
         return {selectedUser: newSelectedUser};
       });
+    } else if (keyName === "Enter") {
+      let idx = this.state.selectedUser;
+      let url = this.props.searchResults[idx].html_url;
+      window.location.href = url;
     }
   }
 
@@ -70,7 +74,7 @@ class UserSearchIndex extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.changeSelection, false);
+    window.removeEventListener('keydown', this.keyListener, false);
   }
 
 }
